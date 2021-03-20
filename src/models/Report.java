@@ -50,9 +50,31 @@ public class Report {
     @Column(name = "title", length = 255, nullable = false)
     private String title;
 
+    @Column(name = "syukkin", length = 255, nullable = false)
+    private String syukkin;
+
+    @Column(name = "taikin", length = 255, nullable = false)
+    private String taikin;
+
     @Lob
     @Column(name = "content", nullable = false)
     private String content;
+
+    public String getSyukkin() {
+        return syukkin;
+    }
+
+    public void setSyukkin(String syukkin) {
+        this.syukkin = syukkin;
+    }
+
+    public String getTaikin() {
+        return taikin;
+    }
+
+    public void setTaikin(String taikin) {
+        this.taikin = taikin;
+    }
 
     @Column(name = "created_at", nullable = false)
     private Timestamp created_at;
